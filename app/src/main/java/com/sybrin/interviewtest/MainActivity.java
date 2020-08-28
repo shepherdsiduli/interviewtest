@@ -99,7 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private List<KeyValue> getData(IDModel idModel) {
+
         List<KeyValue> keyValues = new ArrayList<>();
+        if(idModel == null){
+            return keyValues;
+        }
         KeyValue keyValue;
 
         if (validData(idModel.Surname)) {
